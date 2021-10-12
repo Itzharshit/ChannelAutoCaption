@@ -7,31 +7,29 @@ I am auto Captions Bot with custom markdown and Dynamic support created by @AJPy
 ➪ Remember, Promote me as admin in your channel before any attempting any further steps.
 """    
       DYNAMIC_TEXT = """
-  <u>About Dynamic</u>
-  You can add {variable_name} in caption, bot will replace these variables by its value according to file.
-  Example: Title: {filename}
+  <u>All about Dynamics</u>
+  You can add {variable_name} in caption, bot will replace these variables by its value according to file type using advanced AI by @AJPyroVerse.
+  Like, Title: {filename}
   Supported variables:
-  filename, ext
+  filename & ext
   Additional variables:
-  For video files: width, height
-  For audio files: title, artist
+  For video files: Width, Height
+  For audio files: Title, Artist
 """
 
 
       MARKDOWN_TEXT = """
-🔰 <u>𝐀𝐛𝐨𝐮𝐭 𝐌𝐚𝐫𝐤𝐝𝐨𝐰𝐧</u>
-👉 <b>Bold text</b>
+   <u>𝐌𝐚𝐫𝐤𝐝𝐨𝐰𝐧</u>
+   <code>**text**</code> = <b>Bold text</b>
+
+   <code>__text__</code> = <b>Italic text</b>
+   
+   <code>--text--</code> = <b>Underline text</b>
       
-📌 <code>**text**</code>
-👉 <b>Italic text</b>
-📌 <code>__text__</code>
-👉 <b>Underline text</b>
-      
-📌 <code>--text--</code>
-👉 <b>Strike text</b>
-📌 <code>~~text~~</code>
-👉 <b>Code text</b>
-📌 <code>`text`</code>
-👉 <b>Hyperlink text</b>
-📌 <code>[text](https://t.me/durov)</code>
+   <code>~~text~~</code> = <b>Strike text</b>
+   
+   <code>`text`</code> = <b>Code text</b>
+   
+   <code>[text](https://t.me/AjpyroVerse)</code> = <b>Hyperlink text</b>
+
 """
