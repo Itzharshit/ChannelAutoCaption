@@ -19,8 +19,8 @@ start_button=InlineKeyboardMarkup(
                   InlineKeyboardButton("About Dynamic", callback_data = "dynamic_data")
               ],
               [
-                  InlineKeyboardButton("Source Code", url = "https://github.com/samadii/ChannelAutoCaption"),
-                  InlineKeyboardButton("🔐 CLOSE", callback_data="close_data")
+                  InlineKeyboardButton("Support Group", url = "https://github.com/t.me/AjpyroVerseGroup"),
+                  InlineKeyboardButton("CLOSE", callback_data="close_data")
               ]
         ]
 )
@@ -62,8 +62,8 @@ async def button(bot, cmd: CallbackQuery):
                reply_markup=InlineKeyboardMarkup(
                    [
                        [
-                        InlineKeyboardButton("⬇️ BACK", callback_data="back_data"),
-                        InlineKeyboardButton("🔐 CLOSE", callback_data="close_data")
+                        InlineKeyboardButton("BACK", callback_data="back_data"),
+                        InlineKeyboardButton("CLOSE", callback_data="close_data")
                        ]
  
                    ] 
@@ -77,8 +77,8 @@ async def button(bot, cmd: CallbackQuery):
                reply_markup=InlineKeyboardMarkup(
                    [
                        [
-                        InlineKeyboardButton("⬇️ BACK", callback_data="back_data"),
-                        InlineKeyboardButton("🔐 CLOSE", callback_data="close_data")
+                        InlineKeyboardButton("BACK", callback_data="back_data"),
+                        InlineKeyboardButton("CLOSE", callback_data="close_data")
                        ]
  
                    ] 
