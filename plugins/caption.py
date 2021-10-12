@@ -16,7 +16,7 @@ from pyrogram.errors import FloodWait
 async def editing(bot, message):
     if (message.chat.type == "private"):
         if ("/set_cap" in message.text) and ((len(message.text.split(' ')) == 2) or (len(message.text.split(' ')) == 1)):
-            await message.reply_text("🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nUse this command to set custom caption for any of your channels.\n\n👉 `/set_cap -1001448973320 My Caption`", quote = True)
+            await message.reply_text("𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nUse this command to set custom caption for any of your channels.\n\n `/set_cap -1001448973320 My Caption`", quote = True)
         elif ("/set_cap" in message.text) and (len(message.text.split(' ')) != 2) and (len(message.text.split(' ')) != 1):
             caption = message.text.markdown.split(' ', 2)[2]
             channel = message.text.split(' ', 2)[1].replace("-100", "")
@@ -26,10 +26,10 @@ async def editing(bot, message):
             except:
                 await update_caption(channel, caption)
                 return await message.reply_text(f"**--Your Caption--:**\n\n{caption}", quote=True)
-            await message.reply_text("⚠️\n\nA caption already seted for this channel, you should first use /rmv_cap command to remove the current caption and then try seting new.", quote=True)
+            await message.reply_text("\n\nLol, one caption is already added, you should first use /rmv_cap command to remove the current caption and then try adding new one.", quote=True)
            
         if ("/set_btn" in message.text) and ((len(message.text.split(' ')) == 2) or (len(message.text.split(' ')) == 1)):
-            await message.reply_text("🖊️ 𝐒𝐄𝐓 BUTTON \n\nUse this command to set button for any of your channels.\nSend a Button name and URL(separated by ' | ').\n\n👉 `/set_btn -1001448973320 Channel | https://t.me/channel`", quote = True)
+            await message.reply_text("𝐒𝐄𝐓 BUTTON \n\nUse this command to set button for any of your channels.\nSend a Button name and URL(separated by ' | ').\n\n `/set_btn -1001448973320 Channel | https://t.me/channel`", quote = True)
         elif ("/set_btn" in message.text) and (len(message.text.split(' ')) != 2) and (len(message.text.split(' ')) != 1):
             button = message.text.split(' ', 2)[2]
             channel = message.text.split(' ', 2)[1].replace("-100", "").replace("1", "")
@@ -39,10 +39,10 @@ async def editing(bot, message):
             except:
                 await update_button(channel, button)
                 return await message.reply_text(f"**--Your Button--:**\n\n{button}", quote=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(button.split(' | ')[0], url=f"{button.rsplit(' ', 1)[1]}")]]))
-            await message.reply_text("⚠️\n\nA button already seted for this channel, you should first use /rmv_btn command to remove the current button and then try seting new.", quote=True)
+            await message.reply_text("\n\nA button is already added for this channel, you should first use /rmv_btn command to remove the current button and then try adding new one.", quote=True)
            
         if (message.text == "/rmv_cap"):
-            await message.reply_text("Use this command to remove the current caption of any of your channels.\n\n👉 `/rmv_cap -1001448973320`", quote = True)
+            await message.reply_text("Use this command to remove the current caption of any of your channels.\n\n`/rmv_cap -1001448973320`", quote = True)
         elif ("/rmv_cap" in message.text) and (len(message.text.split(' ')) != 1):
             channel = message.text.split(' ', 1)[1].replace("-100", "")
             try:
@@ -51,19 +51,19 @@ async def editing(bot, message):
             except:
                 return await message.reply_text("Caption not setted yet!", quote=True)     
             await del_caption(channel)
-            await message.reply_text("✅The Caption Removed Successfully.", quote=True)
+            await message.reply_text("Caption Successfully Removed!", quote=True)
 
         if (message.text == "/rmv_btn"):
-            await message.reply_text("Use this command to remove the current button of any of your channels.\n\n👉 `/rmv_btn -1001448973320`", quote = True)
+            await message.reply_text("Use this command to remove the current button of any of your channels.\n\n`/rmv_btn -1001448973320`", quote = True)
         elif ("/rmv_btn" in message.text) and (len(message.text.split(' ')) != 1):
             channel = message.text.split(' ', 1)[1].replace("-100", "").replace("1", "")
             try:
                 a = await get_button(channel)
                 b = a.button
             except:
-                return await message.reply_text("Button not setted yet!", quote=True)     
+                return await message.reply_text("Button not added yet!", quote=True)     
             await del_button(channel)
-            await message.reply_text("✅The Button Removed Successfully.", quote=True)
+            await message.reply_text("Button Successfully Removed.", quote=True)
 
     if (message.chat.type == "channel") and (message.video or message.document or message.audio):
         m = message.video or message.document or message.audio
