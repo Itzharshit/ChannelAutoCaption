@@ -19,7 +19,7 @@ start_button=InlineKeyboardMarkup(
                   InlineKeyboardButton("About Dynamic", callback_data = "dynamic_data")
               ],
               [
-                  InlineKeyboardButton("Support Group", url = "https://github.com/t.me/AjpyroVerseGroup"),
+                  InlineKeyboardButton("Support Group", url = "https://t.me/AjpyroVerseGroup"),
                   InlineKeyboardButton("CLOSE", callback_data="close_data")
               ]
         ]
